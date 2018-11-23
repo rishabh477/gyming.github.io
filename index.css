@@ -12,16 +12,22 @@
     box-shadow: 1px 1px 1px gray;
     transition: 0.5s;
 }
-.header-upper span {
+.navbar-toggle{
+    background-color:black; 
+}
+.navbar-toggle .icon-bar{
+    background-color: white;
+}
+.header-upper .text-right,.txt-left {
     padding: 20px;
     display: inline-block;
     float: left;
-    width: 20%;
+    width: 25%;
 }
 span.text-center {
     float: left;
     width: 50%;
-    font-size: 35px;
+    font-size: 3.5rem;
     padding: 10px;
 }
 .text-right {
@@ -116,9 +122,7 @@ nav.navbar {
     top: calc(100% + 9px);
 }
 .section p{
-    font-size: 20px;
     color: #626262;
-    width: 75%;
     letter-spacing: 1px;
     margin:0 auto;
     margin-top: 30px;
@@ -131,23 +135,18 @@ nav.navbar {
 }
 .map-img img{
     width: 80%;
-    height: 425px;
+    height: 65vh;
     margin-top: 50px;
 }
 /*-----What we do section-----*/
 .menu-section {
     background-color: whitesmoke;
 }
-.wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 0 0;
-}
+
 .wrapper:last-child {
     margin-bottom: 60px;
 }
 .boxes {
-    width: 30%;
     display: flex;
 }
 .font-icon{
@@ -162,12 +161,12 @@ nav.navbar {
 	font-size: 17px;
 }
 .boxes p{
-	color: #a6a5a5;
+	color: #6f6b6b;
     letter-spacing: 1px;
 }
 .number-img{
 	background-image:url("gym6.jpg");
-    height: 425px;
+    height: 500px;
     background-size: cover;
     background-position: center; 
     filter: brightness(40%);
@@ -177,57 +176,33 @@ nav.navbar {
 }
 .all-num{
     position: absolute;
-    top: 33%;
-    right: 4%;
+    top: 0;
     color: white;
 }
-.all-num .container{
-    display: flex;
-}
-#num-counter{
-    flex: 1;
-}
+
 .count{
     font-weight: 300;
     font-size: 65px;
 }
 /*Mobile Image Section*/
-.mobile-img {
-    flex: 1;
-}
 .mobile-img img{
     padding-top: 50px;
 }
-.mobile-section{
-	display: flex;
-}
 
-.mobile-content.section {
-    text-align: left;
-    flex: 3;
-}
 .mobile-content p {
     width: 100%;
 }
-.section-head2::after{
-	left: 15px;
-}
+
 
 /*__________Recent Work Section________**/
 .recent-work{
 	padding: 60px 0;
 }
-.flex-wrapper{
-	display: flex;
-	margin-top: 50px;
-}
-.card{
-	flex: 1;
-}
+.flex-wrapper{margin-top: 50px;}
 .flex-img-wrapper{
 	margin: 0 15px;
 	background-color: white;
-    width: 335px;
+    max-width: 335px;
     overflow: hidden;
 }
 .flex-img-wrapper img{
@@ -261,7 +236,6 @@ nav.navbar {
     display: flex;
     position: absolute;
     top: 80px;
-    left: 30px;
     visibility: hidden;
 }
 .hover-btns .see-more-btn {
@@ -277,15 +251,7 @@ nav.navbar {
 	color: gray;
 }
 /*______________________Insight Section__________________*/
-.flex-insight{
-	display: flex;
-}
-.content-left{
-	flex: 1
-}
-.video-right{
-	flex: 1;
-}
+
 .video-right #myvideo{
     width: 32vw;
     margin-top: 70px;
@@ -337,7 +303,6 @@ nav.navbar {
 }
 .last-img{
     overflow: hidden;
-    flex: 1;
 }
 .last-img img{
     width: 135px;
@@ -354,4 +319,85 @@ nav.navbar {
 	background-color: black;
 	padding: 20px 0;
     color: #b5b3b3;
+}
+.scrollbtn{
+    display: none;
+    padding: 4px 16px;
+    background-color:transparent;
+    font-size: 30px;
+    border-radius:25px;
+    border: 2px solid gray;
+    box-shadow: 1px 1px 1px grey;  
+    position: fixed;
+    display:block;
+    bottom: 10px;
+    right: 20px;
+    color: gray;
+}
+.scrollbtn:hover,.scrollbtn:focus{
+    background-color: lightgray;
+    border-color:lightgray;
+    outline:none;
+}
+
+@media screen and (max-width: 992px){
+    .navbar-collapse.collapse{
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important;
+    }
+
+    .navbar-header .collapse, .navbar-toggle {
+        display: block !important;
+    }
+}
+@media screen and (max-width:768px){
+    .video-right #myvideo{width: 50vw;};
+}
+@media screen and (min-width:1200px){
+    .hover-btns {left: 30px;}
+}
+@media screen and (min-width:992px){
+    .flex-wrapper{display: flex;margin-top: 50px;}
+    .card{flex:1;}
+}
+@media screen and (min-width:768px){
+    .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 0;
+    }
+    .boxes{width:30%;}
+    .flex-insight{display: flex;}
+    .content-left{flex: 1}
+    .video-right{flex: 1;}
+    .mobile-section{display: flex;}
+    .mobile-img {flex: 1;}
+    .mobile-content.section {text-align: left;flex: 3;}
+    .section-head2::after{left: 15px;}
+    .all-num .container {
+    display: flex;
+    justify-content: space-between;
+    }
+    #num-counter {
+    width: 18%;
+    }
+    .all-num{
+    top: 33%;
+    right: 4%;
+    }
+    .section p{font-size:20px;width: 75%;}
+}
+@media screen and (max-width:610px){
+    .header-upper .text-right,.txt-left{display: none;}
+    .header-upper .text-center{width: 100%;}
+    .content p{font-size:2rem;width:100%;}
+    .content h1{font-size: 3rem;}
+}
+@media screen and (max-width:320px){
+    .mobile-img img{max-width:100%;}
 }
