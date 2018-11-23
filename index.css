@@ -1,6 +1,6 @@
 *{
-	margin:0;
-	padding: 0;
+    margin:0;
+    padding: 0;
 }
 .affix{
     position: fixed;
@@ -42,7 +42,7 @@ nav.navbar {
     margin: 0;
 }
 .header-lower li a{
-	color: white;
+    color: white;
 }
 .header-lower li a:hover,.header-lower li a:focus{
     color: white;
@@ -62,11 +62,11 @@ nav.navbar {
     z-index: 10;
 }
 .banner #myvideo{
-	position: static;
-	min-width: 100%;
-	min-height: 100%;
-	right: 0;
-	bottom: 0;
+    position: static;
+    min-width: 100%;
+    min-height: 100%;
+    right: 0;
+    bottom: 0;
 }
 .content{
     position: absolute;
@@ -78,10 +78,10 @@ nav.navbar {
     color: white;
 }
 .content h1{
-	font-size: 5rem;
+    font-size: 5rem;
 }
 .content p{
-	font-size: 22px;
+    font-size: 22px;
     width: 75%;
     margin: 0px auto;
 }
@@ -102,7 +102,7 @@ nav.navbar {
 }
 /*---Section---*/
 .section{
-	margin: 50px 0;
+    margin: 50px 0;
     padding-top:50px;
     text-align: center;
 }
@@ -128,10 +128,11 @@ nav.navbar {
     margin-top: 30px;
 }
 .section-head2{
-	font-size: 20px;
+    font-size: 20px;
 }
 .mobile-content p{
-	font-size: 14px;
+    font-size: 14px;
+    width: 100%;
 }
 .map-img img{
     width: 80%;
@@ -158,14 +159,14 @@ nav.navbar {
     flex: 5;
 }
 .boxes h4{
-	font-size: 17px;
+    font-size: 17px;
 }
 .boxes p{
-	color: #6f6b6b;
+    color: #6f6b6b;
     letter-spacing: 1px;
 }
 .number-img{
-	background-image:url("gym6.jpg");
+    background-image:url("gym6.jpg");
     height: 500px;
     background-size: cover;
     background-position: center; 
@@ -196,17 +197,17 @@ nav.navbar {
 
 /*__________Recent Work Section________**/
 .recent-work{
-	padding: 60px 0;
+    padding: 60px 0;
 }
 .flex-wrapper{margin-top: 50px;}
 .flex-img-wrapper{
-	margin: 0 15px;
-	background-color: white;
+    margin: 0 15px;
+    background-color: white;
     max-width: 335px;
     overflow: hidden;
 }
 .flex-img-wrapper img{
-	width: 100%;
+    width: 100%;
     height: 250px;
     transition: 0.3s;
 }
@@ -219,11 +220,11 @@ nav.navbar {
     visibility: visible;
 }
 .flex-img-wrapper .flex-img-content div{
-	margin-top: 20px;
+    margin-top: 20px;
     font-size: 17px;
 }
 .flex-img-wrapper .flex-img-content span{
-	margin-top: 15px;
+    margin-top: 15px;
     font-size: 12px;
     color: gray;
     display: block;
@@ -244,11 +245,11 @@ nav.navbar {
     color: white;
 }
 .content-left h4{
-	margin-top: 40px;
-	letter-spacing: 1px;
+    margin-top: 40px;
+    letter-spacing: 1px;
 }
 .content-left span{
-	color: gray;
+    color: gray;
 }
 /*______________________Insight Section__________________*/
 
@@ -284,14 +285,14 @@ nav.navbar {
     background: #161616;
 }
 .footer li a{
-	color: #aaa7a7;
+    color: #aaa7a7;
 }
 .footer li a:visited,.footer li a:hover{
     color: white;
     text-decoration:none;
 }
 .footer h4{
-	color: white;
+    color: white;
 }
 .footer li{
     list-style-type: none;
@@ -315,9 +316,9 @@ nav.navbar {
     opacity: 0.9;
 }
 .footer-end{
-	text-align: center;
-	background-color: black;
-	padding: 20px 0;
+    text-align: center;
+    background-color: black;
+    padding: 20px 0;
     color: #b5b3b3;
 }
 .scrollbtn{
@@ -383,14 +384,10 @@ nav.navbar {
     display: flex;
     justify-content: space-between;
     }
-    #num-counter {
-    width: 18%;
-    }
-    .all-num{
-    top: 33%;
-    right: 4%;
-    }
+    #num-counter {width: 20%;}
+    .all-num{top: 33%;right: 4%;}
     .section p{font-size:20px;width: 75%;}
+    .mobile-content p{width: 100%;}
 }
 @media screen and (max-width:610px){
     .header-upper .text-right,.txt-left{display: none;}
