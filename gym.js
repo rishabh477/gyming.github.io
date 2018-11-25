@@ -4,10 +4,10 @@ $(document).ready(function(){
 			margin:10,
 			nav:true,
 			autoplay:true,
-			autoplay:400,
+			autoplayTimeout:1000,
 			animateOut: 'slideOutRight',
 			animateIn: 'slideInX',
-		responsive:{
+		  responsive:{
     		0:{
         		items:1
     			},
@@ -41,17 +41,14 @@ $(document).ready(function(){
         }
       });
     });
-
-    $('.count').each(function(){
-      $(this).prop('Counter',0).animate({
-          Counter: $(this).text()
-      }, {
-          duration: 2000,
-          easing: 'swing',
-          step: function (now) {
-            $(this).text(Math.ceil(now));
-          }
-      })
+    $("#slides").slidesjs({
+        callback: {
+            loaded: function(number) {
+                $(".slidesjs-container").css("max-height", "300px");
+                $(".slidesjs-previous.slidesjs-navigation").html('<i class="fa fa-angle-left" aria-hidden="true"></i>');
+                $(".slidesjs-next.slidesjs-navigation").html('<i class="fa fa-angle-right" aria-hidden="true"></i>')
+            }
+        }
     });
 
     window.onscroll=function() {
@@ -80,54 +77,66 @@ $(document).ready(function(){
         document.documentElement.scrollTop=0;
       }
     }
-  });
   
-        /*var  topScroll =$(window).scrollTop();
-        var  windowHeight=$(window).height();
-        var  totalHeight=topScroll + windowHeight;
-        $.fn.showOnScroll = function(){
-          
-          return this.each(function(){
-            var objectOffset=$(this).offset();
-            var offsetTop=objectOffset.top;
-              console.log(offsetTop);
-            if(!$(this).hasClass('hidden')){
-              $(this).css("opacity",0).addClass('hidden');
+    var  topScroll =$(window).scrollTop();
+    var  windowHeight=$(window).height();
+    var  totalHeight=topScroll + windowHeight;
+    
+    $.fn.showOnScroll = function(direction,speed){
+      return this.each(function(){
+        var objectOffset=$(this).offset();
+        var offsetTop=objectOffset.top;
+        if(!$(this).hasClass('hide')){
+          if(direction == "left"){
+            $(this).css({"opacity":0,"left":"-150px","position":"relative"});
+          }
+          else if(direction=="bottom"){
+            $(this).css({"opacity":0,"bottom":"-100px","position":"relative"});
             }
+              $(this).css("opacity",0);
+        }
 
-            if(!$(this).hasClass('scroll-complete')){
-              if(totalHeight > offsetTop){
-                $(this).animate({"opacity": 1},3000).addClass('scroll-complete');
-              }
+        if(!$(this).hasClass('scroll-complete')){
+          if(totalHeight > offsetTop){
+            $(this).animate({"opacity": 1,"left":0,"bottom":0},speed)
+          }
+        }            
+      })
+    }
 
-            }            
+    $(window).scroll(function(){
+      topScroll =$(window).scrollTop();
+      windowHeight=$(window).height();
+      totalHeight=topScroll + windowHeight;
+      $('.font-icon').showOnScroll("right",2000);
+      $('.mobile-img img').showOnScroll("left",1000);
+      $('.map-img').showOnScroll("bottom",1000)
+    });
 
-          })
-        }*/
-
-        $(window).scroll(function(){
-          
-          /*topScroll =$(window).scrollTop();
-          windowHeight=$(window).height();
-          totalHeight=topScroll+ windowHeight;
-            $('.font-icon').showOnScroll();*/
-            var  topScroll =$(window).scrollTop();
-            var  windowHeight=$(window).height();
-            var  totalHeight=topScroll + windowHeight;
-
-            var objectOffset=$('.font-icon').offset();
-            var offsetTop=objectOffset.top;
-              console.log(offsetTop);
-              $('.font-icon').css("opacity",0)
-
-            if(!$('.font-icon').hasClass('scroll-complete')){
-              if(totalHeight > offsetTop){
-                $('.font-icon').animate({"opacity":1},3000).addClass('scroll-complete');
-              }
-
-            }            
-
-            
-  });
+    $(window).scroll(function(){
+      topScroll =$(window).scrollTop();
+      windowHeight=$(window).height();
+      totalHeight=topScroll + windowHeight;
+     
+        $('.count').each(function(){
+          var objectOffset=$('.all-num').offset();
+          var offsetTop=objectOffset.top;
+          if(!$(this).hasClass('showOnce')){
+            if(totalHeight>offsetTop){
+              $(this).prop('Counter',0).animate({
+                  Counter: $(this).text()
+              },{
+                  duration: 3000,
+                  easing: 'swing',
+                  step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+              })
+              $(this).addClass('showOnce');
+            }
+          }
+        })
+      })
+});
 
                         
