@@ -135,8 +135,6 @@ input[type="search"]:focus{
     letter-spacing: 1px;
     margin:0 auto;
     margin-top: 30px;
-}
-.section p{
     font-size: 22px;
     width: 75%;
 }
@@ -313,7 +311,7 @@ input[type="search"]:focus{
 .footer li a{
     color: #aaa7a7;
 }
-.footer li a:visited,.footer li a:hover{
+.footer li a:focus,.footer li a:hover{
     color: white;
     text-decoration:none;
 }
@@ -323,6 +321,14 @@ input[type="search"]:focus{
 .footer li{
     list-style-type: none;
     padding-top: 20px;
+}
+.list-inline li a{
+    color: #aaa7a7;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.list-inline li a:hover,.list-inline li a:focus{
+    color: white;
 }
 .insta-images{
     display: flex;

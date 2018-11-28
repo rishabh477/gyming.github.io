@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+
+}
+.affix{
+    position: fixed;
+    background-color: white;
+    color: black;
+    top: 0;
+    width: 100%;
+    z-index: 10 !important;
+    box-shadow: 1px 1px 1px gray;
+    transition: 0.5s;
+}
+.navbar-toggle{
+    background-color:black; 
+}
+.navbar-toggle .icon-bar{
+    background-color: white;
+}
+.header-upper .text-right,.txt-left {
+    padding: 20px;
+    display: inline-block;
+    float: left;
+    width: 25%;
+}
+span.text-center {
+    float: left;
+    width: 50%;
+    font-size: 3.5rem;
+    padding: 10px;
+}
+.text-right {
+    width: 20%;
+}
+.header-upper {
+    background-color: black;
+    color: white;
+    border-bottom:1px solid white; 
+}
+nav.navbar {
+    margin: 0;
+}
+.header-lower li a{
+    color: white;
+}
+.header-lower li a:hover,.header-lower li a:focus{
+    color: white;
+    background-color: #1abc9c;
+}
+.header-lower {
+    background-color: black;
+}
+input[type="search"] {
+    border: 1px solid;
+    padding: 7px;
+    border-radius: 5px;
+}
+input[type="search"]:focus{
+    outline: none;
+}
+.header form.form-inline {
+    padding-top: 6px;
+}
+/*---------Banner Section---------*/
+.header {
+    width: 100%;
+    z-index: 10;
+    opacity: 0.8;
+}
+.bg-top{
+    position: relative;
+}
+.banner{
+    background-image: url("https://res.cloudinary.com/cloudraj/image/upload/v1543317750/gym%20photos%20and%20videos/laptop.jpg");
+    height: 500px;
+    background-size: cover;
+    background-position-y: bottom;
+}
+.content{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+.content h1{
+    font-size: 3.5vw;
+}
+.section{
+    padding:80px 0;
+    text-align: center;
+    background-color: whitesmoke;
+}
+.section-header p{
+    letter-spacing: 1px;
+    margin:0 auto;
+    margin-top: 30px;
+    font-size: 18px;
+}
+.section-head {
+    font-size: 24px;
+    position: relative;
+}
+.section-head::after {
+    content: '';
+    display: block;
+    background-color: black;
+    height: 2px;
+    width: 25px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: calc(100% + 5px);
+}
+.content-left{
+    text-align: left;
+    font-size: 16px;
+    padding-right: 30px; 
+    color: gray;
+}
+.content-right label{
+    display: block;
+    text-align: left;
+}
+.content-right .count{
+    float: right;
+}
+.progress {
+    height: 15px;
+    margin-bottom: 30px;
+}
+.progress-bar{
+    width: 0%;
+}
+.content-right .count::after{
+    content: '%';
+}
+.progress-bar{
+    background-color:#1abc9c; 
+}
+/*------Step by Step Section-----*/
+.step-section{
+    background-color: white;
+}
+.step-section .btn {
+    padding: 55px 70px;
+    font-size: 50px;
+    border-radius: 100px;
+    color: #a29c9c;
+    transition: 0.6s;
+}
+.step-section .btn:hover,.step-section .btn:focus{
+    background-color:#1abc9c;
+    color: white; 
+    transition: 0.6s;
+    outline: none;
+}
+.box-content {
+    padding-top: 30px;
+}
+.box-content h4{
+    font-weight: 600;
+}
+.box-content p{
+    color: #7d7c7c;
+}
+/*-----Vendor Section----*/
+.vendor-section{
+    padding: 100px 0;
+}
+.owl-carousel .owl-item img {
+    max-width: 100%;
+    height: 100px;
+}
+.owl-theme .owl-nav,.owl-dots{
+    display: none;
+}
+/*-------FOOTER SECTION---------*/
+.footer {
+    color: #aaa7a7;
+    padding: 70px 0;
+    background: #161616;
+}
+.footer li a{
+    color: #aaa7a7;
+}
+.footer li a:focus,.footer li a:hover{
+    color: white;
+    text-decoration:none;
+}
+.footer h4{
+    color: white;
+}
+.footer li{
+    list-style-type: none;
+    padding-top: 20px;
+}
+.list-inline li a{
+    color: #aaa7a7;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.list-inline li a:hover,.list-inline li a:focus{
+    color: white;
+}
+.insta-images{
+    display: flex;
+    margin-top: 40px;
+}
+.last-img{
+    overflow: hidden;
+}
+.last-img img{
+    width: 135px;
+    height: 135px;
+    transition: all 0.3s;
+}
+.last-img:hover img{
+    transition: all 0.3s;
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+.footer-end{
+    text-align: center;
+    background-color: black;
+    padding: 20px 0;
+    color: #b5b3b3;
+}
+.scrollbtn{
+    display: none;
+    padding: 4px 16px;
+    background-color:transparent;
+    font-size: 30px;
+    border-radius:25px;
+    border: 2px solid gray;
+    box-shadow: 1px 1px 1px grey;  
+    position: fixed;
+    display:block;
+    bottom: 10px;
+    right: 20px;
+    color: gray;
+}
+.scrollbtn:hover,.scrollbtn:focus{
+    background-color: lightgray;
+    border-color:lightgray;
+    outline:none;
+}
+/*-------Media Query Starts-------*/
+@media screen and (min-width:992px){
+    .header {position: absolute;}
+}
+
+@media screen and (min-width:768px){
+    .flex-insight{display: flex;margin-top: 50px;justify-content: space-between;}
+    .content-left{flex: 1;}
+    .content-right{flex: 2;}
+    .boxes {width: 17%;}
+    .step-section .btn {padding: 3.5vw 4.5vw;font-size: 4vw;}
+}
+
+@media screen and (max-width: 992px){
+    .navbar-collapse.collapse{
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display: block !important;
+    }
+    .navbar-nav,.navbar-nav>li,.navbar-right,.navbar-header{
+        float: none !important;
+    }
+    .navbar-nav li a:first-child{
+        display: block;
+    }
+    .header{opacity: 1;}
+    .content h1{font-size: 5.5vw}
+}
+@media screen and (max-width:768px){
+    .content h1{font-size: 5.5vw;}
+    .content-left{padding-bottom: 100px;}
+}
+@media screen and (max-width:610px){
+    .header-upper .text-right,.txt-left{display: none;}
+    .header-upper .text-center{width: 100%;}
+    .owl-carousel .owl-item img {width: 100%;}
+    .content h1{font-size: 6.5vw;}
+}
